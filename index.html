@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>EPAM</title>
+</head>
+  <body>
+  <form class="form-inline">
+  <div>
+    <button type="button" class="btn btn-info" id="btn-add">Add New
+  </button>  
+  </div>
+  </form>
+  <hr>
+  <table class="table table-bordered" id="table">
+    <thead>
+      <tr>
+        <th>Name<i class="glyphicon glyphicon-chevron-up" data-name="name"></i></th>
+        <th>Count</th>
+        <th>Price<i class="glyphicon glyphicon-chevron-up" id="data-price" data-name="price" ></i></th>
+        <th>Action</th>
+      </tr>   
+    </thead>
+    <tbody> 
+      <tr id="template-row" class="hidden"><td class="name"><a href="url"></a></td><td class="count"></td><td class="price"></td>
+        <td>
+          <button type="button" class="btn btn-default btn-edit">Edit</button>
+          <button type="button" class="btn btn-default btn-delete" data-id="0">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<!-- HTML-код модального окна для удаления-->
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Заголовок модального окна -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <!-- Основное содержимое модального окна -->
+      <div class="modal-body">
+        Are you sure you want to perfom this action
+      </div>
+      <!-- Футер модального окна -->
+      <div class="modal-footer">
+        <button type="button" id ="yes" class="btn btn-default" data-dismiss="modal">YES</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">NO</button>
+      </div>
+    </div>
+  </div>
+</div>   
+  <!-- Modal окно для изменения edit -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">   
+      <div class="modal-content">
+        <div class="modal-body">
+          <form role="form" id="loginForm">
+          <div class="form-group">
+              <label for="usrname">Name:</label>
+              <div class="error-box">Поле заполнено не коректно</div>
+              <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group">
+              <label for="usrname">Count:</label>
+              <div class="error-box">Поле заполнено не коректно</div>
+              <input type="text" class="form-control" name="count" id="count">
+            </div>
+            <div class="form-group">
+              <label for="usrname">Price:</label>
+              <div class="error-box">Поле заполнено не коректно</div>
+              <input type="text" class="form-control" name="price" id="price">
+            </div>
+              <button type="button" class="btn btn-success btn-block" id="btnadd">Add</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+    <link href="css/style.css" rel="stylesheet">
+    <script
+        src="http://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/acounting.js"></script>
+  </body>
+</html>

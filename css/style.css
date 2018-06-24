@@ -1,0 +1,11 @@
+.error-box{
+	display: none;
+	color:#ff0000; 
+}
+.form-group.has-error .error-box{
+	display: block;
+
+}
+.modal-body{
+	padding:40px 50px;
+}
